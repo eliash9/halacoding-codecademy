@@ -381,5 +381,38 @@ if (overlay) {
     overlay.onclick = toggleMenu; // Close when clicking outside
 }
 
+// Mobile Menu Logic
+// ... (existing code) ...
+
+// Welcome Modal Logic
+function checkWelcomeModal() {
+    const hasSeenWelcome = localStorage.getItem('halacoding_welcome_seen');
+    if (!hasSeenWelcome) { // Show if not set
+        const modal = document.getElementById("welcome-modal");
+        const btn = document.getElementById("close-modal-btn");
+
+        if (modal && btn) {
+            // Delay slightly for effect
+            setTimeout(() => {
+                modal.classList.add("show");
+            }, 500);
+
+            btn.onclick = () => {
+                modal.classList.remove("show");
+                localStorage.setItem('halacoding_welcome_seen', 'true');
+
+                // Greeting Confetti
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#00A8E8', '#ffffff'] // Brand colors
+                });
+            };
+        }
+    }
+}
+
 // Start
 loadLessons();
+checkWelcomeModal();

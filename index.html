@@ -7,6 +7,7 @@
     <title>Codecademy Mini</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 
 <body>
@@ -69,6 +70,30 @@
                 <div id="console-logs"></div>
             </div>
         </main>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>👋 Selamat Datang di HALACODING 1455!</h2>
+            <p style="text-align: center; color: #666;">Platform belajar pemrograman web interaktif.</p>
+
+            <div class="guide-steps">
+                <h3>📚 Panduan Singkat:</h3>
+                <ul>
+                    <li><strong>1. Pilih Materi:</strong> Klik materi di sidebar. Materi baru akan terbuka jika materi
+                        sebelumnya selesai (🔒).</li>
+                    <li><strong>2. Pelajari & Ngoding:</strong> Baca materi, lalu tulis jawabanmu di <em>Editor</em>.
+                    </li>
+                    <li><strong>3. Eksekusi:</strong> Klik tombol <span
+                            style="background:#28a745; color:#fff; padding:2px 5px; border-radius:3px; font-size:12px;">Jalankan
+                            ▶</span> untuk melihat hasil.</li>
+                    <li><strong>4. Simpan Progres:</strong> Jawaban benar akan otomatis tersimpan.</li>
+                </ul>
+            </div>
+
+            <button id="close-modal-btn">Mulai Petualangan 🚀</button>
+        </div>
     </div>
 
     <!-- Monaco Loader -->
