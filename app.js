@@ -125,6 +125,10 @@ function renderSidebar() {
         const pct = Math.round((completedLessons.length / lessons.length) * 100);
         progressFill.style.width = `${pct}%`;
         progressText.textContent = `${pct}% (${completedLessons.length}/${lessons.length})`;
+
+        // Update Mobile Progress
+        const mobileProg = document.getElementById("mobile-progress");
+        if (mobileProg) mobileProg.textContent = `${pct}%`;
     }
 
     sidebar.innerHTML = "";
@@ -159,6 +163,12 @@ function loadLesson(i) {
     if (i >= lessons.length) return;
     current = i;
     renderSidebar();
+
+    // Auto-close mobile menu
+    if (window.innerWidth <= 768) {
+        document.getElementById("sidebar").classList.remove("open");
+        document.body.classList.remove("menu-open");
+    }
 
     const l = lessons[i];
     document.getElementById("lesson-title").textContent = l.title;
@@ -353,6 +363,23 @@ document.getElementById("run-btn").onclick = () => {
         }
     }, 200);
 };
+
+// Mobile Menu Logic
+const menuToggle = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("mobile-overlay");
+
+function toggleMenu() {
+    sidebar.classList.toggle("open");
+    document.body.classList.toggle("menu-open");
+}
+
+if (menuToggle) {
+    menuToggle.onclick = toggleMenu;
+}
+if (overlay) {
+    overlay.onclick = toggleMenu; // Close when clicking outside
+}
 
 // Start
 loadLessons();

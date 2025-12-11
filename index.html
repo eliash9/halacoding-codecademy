@@ -3,11 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codecademy Mini</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
+
+    <!-- Mobile Header (Visible only on small screens) -->
+    <div id="mobile-header">
+        <div class="mobile-brand">
+            <button id="menu-toggle">☰</button>
+            <span>HALACODING</span>
+        </div>
+        <div id="mobile-progress">0%</div>
+    </div>
+
+    <div class="overlay" id="mobile-overlay"></div>
 
     <div class="container">
         <aside id="sidebar">
