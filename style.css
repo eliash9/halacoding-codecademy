@@ -143,6 +143,19 @@ aside {
     font-weight: bold;
 }
 
+#lesson-list div.locked {
+    opacity: 0.5;
+    background: #e9ecef;
+    cursor: not-allowed; /* Visual cue, but pointer-events: none overrides this usually */
+    pointer-events: none; /* Disables clicking */
+    color: #999;
+}
+
+#lesson-list div.locked::after {
+    content: "🔒";
+    font-size: 14px;
+}
+
 main {
     flex: 1;
     padding: 25px;

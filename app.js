@@ -134,7 +134,19 @@ function renderSidebar() {
         titleSpan.textContent = l.title;
         item.appendChild(titleSpan);
 
-        item.onclick = () => loadLesson(i);
+        // Check Lock Status: Locked if previous lesson is not completed
+        // Lesson 0 is never locked.
+        let isLocked = false;
+        if (i > 0 && !completedLessons.includes(i - 1)) {
+            isLocked = true;
+        }
+
+        if (isLocked) {
+            item.classList.add("locked");
+            // Remove click handler or just don't add it (pointer-events: none in CSS handles it too)
+        } else {
+            item.onclick = () => loadLesson(i);
+        }
 
         if (i === current) item.classList.add("active");
         if (completedLessons.includes(i)) item.classList.add("completed");
