@@ -1,0 +1,319 @@
+[
+  {
+    "id": 1,
+    "title": "MODULE 1 — Pengenalan Pemrograman Web",
+    "description": "Memahami dasar-dasar bagaimana web bekerja, perbedaan frontend vs backend, dan persiapan tools.",
+    "lessons": [
+      {
+        "title": "Konsep Dasar Web",
+        "content": "Website terdiri dari Frontend (apa yang dilihat user) dan Backend (logika di server). Browser (seperti Chrome) menggunakan engine untuk menerjemahkan kode HTML, CSS, dan JS menjadi tampilan visual.",
+        "example": "Frontend: HTML/CSS/JS\nBackend: PHP/Node.js/Python\nBrowser: Chrome/Firefox",
+        "challenge": "Sebutkan 3 komponen utama Frontend!",
+        "test": "return (answer.toLowerCase().includes('html') && answer.toLowerCase().includes('css') && answer.toLowerCase().includes('js'));"
+      },
+      {
+        "title": "Struktur File Web",
+        "content": "Project web biasanya memiliki file utama 'index.html', folder 'css' untuk style, 'js' untuk script, dan 'assets' untuk gambar.",
+        "example": "my-project/\n├── index.html\n├── css/\n│   └── style.css\n├── js/\n│   └── script.js\n└── assets/\n    └── logo.png",
+        "challenge": "Apa nama file utama yang otomatis dibuka browser?",
+        "test": "return answer.toLowerCase().includes('index.html');"
+      }
+    ],
+    "project": {
+      "title": "Setup Workspace",
+      "task": "Buat folder proyek pertamamu dengan struktur standar.",
+      "requirements": [
+        "Buat folder 'belajar-web'",
+        "Di dalamnya buat file 'index.html', 'style.css', 'script.js'",
+        "Tulis 'Hello World' di index.html"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "MODULE 2 — HTML Dasar",
+    "description": "Membangun struktur dasar halaman web menggunakan HTML.",
+    "lessons": [
+      {
+        "title": "Elemen Dasar",
+        "content": "HTML menggunakan tag. H1-H6 untuk judul, p untuk paragraf, a untuk link, img untuk gambar.",
+        "example": "<h1>Judul</h1>\n<p>Paragraf</p>\n<a href='#'>Link</a>\n<img src='foto.jpg' alt='Foto'>",
+        "challenge": "Buat elemen heading level 1 dengan teks 'Halo'.",
+        "test": "return code.includes('<h1>Halo</h1>');"
+      },
+      {
+        "title": "List & Table",
+        "content": "Gunakan ul/ol untuk list dan table untuk data tabular.",
+        "example": "<ul><li>Item 1</li></ul>\n<table><tr><td>Data</td></tr></table>",
+        "challenge": "Buat unordered list dengan 1 item 'Kopi'.",
+        "test": "return code.includes('<ul>') && code.includes('<li>Kopi</li>');"
+      },
+      {
+        "title": "Semantic HTML",
+        "content": "Gunakan tag bermakna: header, nav, main, article, footer agar kode lebih rapi dan SEO friendly.",
+        "example": "<header>...</header>\n<main>...</main>\n<footer>...</footer>",
+        "challenge": "Gunakan tag footer untuk membungkus copyright.",
+        "test": "return code.includes('<footer>') && code.includes('copyright');"
+      }
+    ],
+    "project": {
+      "title": "Landing Page Sederhana HTML Only",
+      "task": "Buat halaman profil diri atau produk sederhana tanpa CSS.",
+      "requirements": [
+        "Ada Header (Logo teks + Navigasi)",
+        "Ada Hero section (Judul + Paragraf + Tombol Link)",
+        "Ada Section 'About' dengan gambar",
+        "Ada Footer dengan copyright"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "MODULE 3 — HTML Menengah",
+    "description": "Memperdalam HTML dengan form, media, dan struktur layout.",
+    "lessons": [
+      {
+        "title": "Form & Input Lengkap",
+        "content": "Form digunakan untuk interaksi user. Ada banyak tipe input: text, email, password, radio, checkbox, date.",
+        "example": "<form>\n  <input type='text' placeholder='Nama'>\n  <input type='email' required>\n  <button>Kirim</button>\n</form>",
+        "challenge": "Buat input field tipe email yang wajib diisi.",
+        "test": "return code.includes('type=\"email\"') && code.includes('required');"
+      },
+      {
+        "title": "Media & Iframe",
+        "content": "Menyematkan audio, video, atau halaman lain (iframe).",
+        "example": "<video controls src='movie.mp4'></video>\n<iframe src='https://peta.com'></iframe>",
+        "challenge": "Tulis tag video dengan kontrol.",
+        "test": "return code.includes('<video') && code.includes('controls');"
+      }
+    ],
+    "project": {
+      "title": "Form Pendaftaran Lengkap",
+      "task": "Buat halaman pendaftaran member.",
+      "requirements": [
+        "Input Nama, Email, Password",
+        "Radio button untuk Jenis Kelamin",
+        "Checkbox untuk 'Hobi'",
+        "Select untuk 'Kota'",
+        "Gunakan validasi HTML5 (required, type email)"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "MODULE 4 — CSS Dasar",
+    "description": "Menghias halaman web dengan warna, font, dan spacing.",
+    "lessons": [
+      {
+        "title": "Selektor & Warna",
+        "content": "Pilih elemen dengan Tag, Class (.), atau ID (#). Ubah warna dengan color dan background.",
+        "example": "h1 { color: red; }\n.btn { background: blue; }\n#header { padding: 10px; }",
+        "challenge": "Ubah warna teks semua paragraf menjadi abu-abu.",
+        "test": "return code.includes('p {') && code.includes('color: gray');"
+      },
+      {
+        "title": "Box Model",
+        "content": "Setiap elemen adalah kotak. Ada Margin (luar), Border (garis), Padding (dalam), dan Content.",
+        "example": ".box {\n  margin: 20px;\n  border: 1px solid black;\n  padding: 10px;\n}",
+        "challenge": "Berikan padding 20px pada class .card.",
+        "test": "return code.includes('.card') && code.includes('padding: 20px');"
+      }
+    ],
+    "project": {
+      "title": "Style Landing Page Dasar",
+      "task": "Hias project HTML dari Module 2 dengan CSS.",
+      "requirements": [
+        "Berikan warna background yang nyaman",
+        "Gunakan font non-default (misal sans-serif)",
+        "Berikan jarak antar elemen (margin/padding)",
+        "Style tombol agar terlihat menarik (bukan default)"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "MODULE 5 — CSS Layout",
+    "description": "Mengatur tata letak web agar rapi dan responsif.",
+    "lessons": [
+      {
+        "title": "Flexbox",
+        "content": "Cara modern mengatur layout 1 dimensi (baris/kolom). Gunakan display: flex.",
+        "example": ".container { display: flex; justify-content: center; align-items: center; }",
+        "challenge": "Buat container menjadi flex dan rata tengah secara horizontal.",
+        "test": "return code.includes('display: flex') && code.includes('justify-content: center');"
+      },
+      {
+        "title": "Responsive Web",
+        "content": "Gunakan Media Query agar tampilan menyesuaikan ukuran layar (HP vs Laptop).",
+        "example": "@media (max-width: 768px) {\n  .menu { display: none; }\n}",
+        "challenge": "Ubah background body jadi merah jika layar < 600px.",
+        "test": "return code.includes('@media') && code.includes('max-width: 600px') && code.includes('background: red');"
+      }
+    ],
+    "project": {
+      "title": "Homepage Responsive",
+      "task": "Buat layout website dengan Header, Hero, 3 Kolom Fitur, dan Footer.",
+      "requirements": [
+        "Navbar horizontal di desktop, vertikal/hidden di mobile",
+        "Bagian 'Fitur' berjejer 3 kolom (Flex/Grid) di desktop",
+        "Bagian 'Fitur' menjadi 1 kolom (stack) di mobile",
+        "Footer rata tengah"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "MODULE 6 — CSS Modern",
+    "description": "Membuat web lebih hidup dengan variabel, transisi, dan animasi.",
+    "lessons": [
+      {
+        "title": "Transition & Transform",
+        "content": "Membuat perubahan style menjadi halus. Transform untuk memutar/memperbesar.",
+        "example": ".btn {\n  transition: 0.3s;\n}\n.btn:hover {\n  transform: scale(1.1);\n  background: red;\n}",
+        "challenge": "Buat elemen membesar 1.2x saat di-hover.",
+        "test": "return code.includes(':hover') && code.includes('scale(1.2)');"
+      },
+      {
+        "title": "CSS Variables",
+        "content": "Simpan nilai CSS agar mudah dikelola ulang.",
+        "example": ":root { --primary: #ff0000; }\nbutton { background: var(--primary); }",
+        "challenge": "Definisikan variabel --main-color.",
+        "test": "return code.includes('--main-color:');"
+      }
+    ],
+    "project": {
+      "title": "Animated Hero Section",
+      "task": "Buat bagian Hero dengan animasi masuk.",
+      "requirements": [
+        "Teks judul muncul perlahan (fade-in)",
+        "Tombol memiliki efek hover yang menarik",
+        "Gunakan CSS Variables untuk skema warna"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title": "MODULE 7 — JavaScript Dasar",
+    "description": "Menambahkan logika pemrograman ke dalam website.",
+    "lessons": [
+      {
+        "title": "Variabel & Tipe Data",
+        "content": "Gunakan let/const. Tipe data: String, Number, Boolean.",
+        "example": "let nama = 'Budi';\nconst umur = 20;",
+        "challenge": "Buat variabel konstanta bernama PI dengan nilai 3.14.",
+        "test": "return code.includes('const PI = 3.14');"
+      },
+      {
+        "title": "Fungsi & Logika",
+        "content": "Function untuk kode berulang. If/Else untuk keputusan.",
+        "example": "function sapa(nama) {\n  if(nama) return 'Halo ' + nama;\n  return 'Halo Tamu';\n}",
+        "challenge": "Buat fungsi 'tambah' yang menerima a dan b lalu mengembalikan hasil jumlahnya.",
+        "test": "return code.includes('function tambah(a, b)') && code.includes('return a + b');"
+      }
+    ],
+    "project": {
+      "title": "Program Hitung Sederhana",
+      "task": "Buat kalkulator logika sederhana (tanpa UI rumit).",
+      "requirements": [
+        "Buat fungsi untuk tambah, kurang, kali, bagi",
+        "Gunakan prompt() untuk minta input angka",
+        "Tampilkan hasil dengan alert() atau console.log"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title": "MODULE 8 — JavaScript DOM",
+    "description": "Interaksi JavaScript dengan elemen HTML.",
+    "lessons": [
+      {
+        "title": "Seleksi & Manipulasi Element",
+        "content": "Gunakan querySelector untuk ambil elemen. Ubah konten dengan innerText/innerHTML.",
+        "example": "const judul = document.querySelector('h1');\njudul.innerText = 'Judul Baru';",
+        "challenge": "Ubah background body menjadi hitam via JS.",
+        "test": "return code.includes('document.body.style.background =') && code.includes('black');"
+      },
+      {
+        "title": "Event Listener",
+        "content": "Menjalankan kode saat user melakukan aksi (klik, ketik).",
+        "example": "const btn = document.querySelector('button');\nbtn.addEventListener('click', function() { alert('Klik!'); });",
+        "challenge": "Tambahkan event click pada elemen id 'tombol'.",
+        "test": "return code.includes(\"querySelector('#tombol')\") && code.includes(\"addEventListener('click'\");"
+      }
+    ],
+    "project": {
+      "title": "Todo App Dasar",
+      "task": "Aplikasi pencatat tugas sederhana.",
+      "requirements": [
+        "Input text untuk tugas baru",
+        "Tombol 'Tambah' menambahkan item ke list (ul)",
+        "Klik item untuk mencoret (selesai)",
+        "Tombol hapus di setiap item"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "title": "MODULE 9 — JavaScript Lanjutan",
+    "description": "Fitur modern JS: Data storage dan Fetch API.",
+    "lessons": [
+      {
+        "title": "LocalStorage",
+        "content": "Menyimpan data di browser agar tidak hilang saat refresh.",
+        "example": "localStorage.setItem('nama', 'Budi');\nlet n = localStorage.getItem('nama');",
+        "challenge": "Simpan data 'theme' bernilai 'dark'.",
+        "test": "return code.includes(\"localStorage.setItem('theme', 'dark')\");"
+      },
+      {
+        "title": "Fetch API (Async/Await)",
+        "content": "Mengambil data dari server luar.",
+        "example": "async function getData() {\n  const res = await fetch('https://api.com/data');\n  const data = await res.json();\n}",
+        "challenge": "Panggil fetch ke url '/api/users'.",
+        "test": "return code.includes(\"fetch('/api/users')\");"
+      }
+    ],
+    "project": {
+      "title": "Mini Notes App",
+      "task": "Aplikasi catatan yang datanya tersimpan.",
+      "requirements": [
+        "Bisa tambah/hapus catatan",
+        "Data disimpan di LocalStorage (tetap ada saat refresh)",
+        "Tampilkan daftar catatan saat halaman dimuat"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "MODULE 10 — Final Project",
+    "description": "Proyek akhir komprehensif: Website Company Profile.",
+    "lessons": [
+      {
+        "title": "Perencanaan & Struktur",
+        "content": "Gabungkan semua skill: HTML Semantic, CSS Responsive Modern, JS Interaktif.",
+        "example": "Plan -> Wireframe -> Code HTML -> Code CSS -> Code JS -> Refactor",
+        "challenge": "Buat rencana struktur folder final project.",
+        "test": "return true;"
+      }
+    ],
+    "project": {
+      "title": "Website Company Profile",
+      "task": "Buat website profil perusahaan fiktif yang profesional.",
+      "requirements": [
+        "Homepage: Hero, About, Services, Contact",
+        "Navbar Responsive & Sticky",
+        "Interaksi JS: Toggle Menu Mobile, Slider/Carousel sederhana, Form Contact validasi",
+        "Desain: Modern, bersih, konsisten (Color Palette)",
+        "Code: Rapi, komentar jelas, semantic HTML"
+      ],
+      "folder_structure": "project/\n├── index.html\n├── css/\n│   ├── style.css\n│   └── responsive.css\n├── js/\n│   └── main.js\n└── assets/\n    └── images/",
+      "steps": [
+        "1. Tentukan tema perusahaan (misal: Agensi Digital)",
+        "2. Siapkan aset gambar dan palet warna",
+        "3. Buat kerangka HTML lengkap",
+        "4. Styling CSS Desktop first lalu Mobile (atau sebaliknya)",
+        "5. Tambahkan interaksi JavaScript",
+        "6. Final check (Typo, Link rusak, Responsiveness)"
+      ]
+    }
+  }
+]

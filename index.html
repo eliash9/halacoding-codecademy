@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Codecademy Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <aside id="sidebar">
+            <div class="branding">
+                <img src="assets/logo.png" alt="Logo">
+                <h1>HALACODING 1455</h1>
+            </div>
+
+            <!-- Progress Section -->
+            <div id="progress-section">
+                <div class="progress-info">
+                    <span>Progress:</span>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Dynamic Content -->
+            <div id="lesson-list"></div>
+        </aside>
+
+        <main id="content">
+            <h2 id="lesson-title"></h2>
+            <div id="lesson-content"></div>
+
+            <h3>Editor</h3>
+            <!-- Monaco Container -->
+            <div id="editor-container"></div>
+
+            <button id="run-btn">Jalankan ▶</button>
+            <button id="finish-project-btn">✅ Tandai Selesai</button>
+
+            <!-- Output Area -->
+            <div id="output-container">
+                <div id="status-bar">Siap dijalankan...</div>
+
+                <!-- Tab Layout (Optional visual separation) -->
+                <h4 class="output-label">Hasil / Preview:</h4>
+
+                <!-- Live Preview (For HTML/CSS) -->
+                <iframe id="live-preview"></iframe>
+
+                <!-- Console (For JS) -->
+                <div id="console-logs"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Monaco Loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
